@@ -2,6 +2,7 @@ from .exceptions import (DcryptItException, ConnectionError, HTTPError, APIError
 import requests
 from json import loads as json_loads
 
+
 def read_dlc(path=None, url=None):
     """
         Parameters:
@@ -30,7 +31,8 @@ def read_dlc(path=None, url=None):
         return response
     except requests.exceptions.HTTPError:
         raise HTTPError('The request to dcrypt.it returned an error')
-    except ValueError, KeyError:
+    except (ValueError, KeyError):
         raise APIError('dcrypt.it returned an error, or an invalid JSON response')
     except:
         raise DcryptItException('An unknown error occurred while parsing the response')
+

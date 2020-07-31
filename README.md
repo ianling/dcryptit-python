@@ -1,5 +1,7 @@
 # dcryptit
-A python2 library for interacting with http://dcrypt.it, a website for decrypting DLC files.
+A python3 library for interacting with http://dcrypt.it, a website for decrypting DLC files.
+
+A legacy python2.x version can be found under the 1.0 tag, or the python2 branch.
 
 # Example Usage
 
